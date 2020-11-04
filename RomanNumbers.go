@@ -16,7 +16,7 @@ var voc = map[string]int{
 	"M": 1000,
 }
 
-func roman(roman string) int {
+func roman(roman string) (result int) {
 	result = 0
 	array := strings.Split(roman, "")
 	for i := 0; i < len(array); i++ {
@@ -30,10 +30,9 @@ func roman(roman string) int {
 			result += voc[array[i]]
 		}
 	}
-	fmt.Println(result)
-  	return 0
+  	return 
 }
 
 func main() {
-	roman("XXI");
+	fmt.Println(roman("IX"))
 }
